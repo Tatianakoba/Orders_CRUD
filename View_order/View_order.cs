@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Orders_CRUD
+namespace View_order
 {
-    public partial class Form1 : Form
+    public partial class View_order : Form
     {
-        public Form1()
+        public View_order()
         {
             InitializeComponent();
         }

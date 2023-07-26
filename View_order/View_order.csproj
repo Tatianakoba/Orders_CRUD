@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B1DEA76-3F07-444D-8B51-31DDC7013328}</ProjectGuid>
+    <ProjectGuid>{1376661A-9104-4E8D-866C-EA32D01BF03B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Orders_CRUD</RootNamespace>
-    <AssemblyName>Orders_CRUD</AssemblyName>
+    <RootNamespace>View_order</RootNamespace>
+    <AssemblyName>View_order</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Create_order.cs">
+    <Compile Include="View_order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Create_order.Designer.cs">
-      <DependentUpon>Create_order.cs</DependentUpon>
+    <Compile Include="View_order.Designer.cs">
+      <DependentUpon>View_order.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Create_order.resx">
-      <DependentUpon>Create_order.cs</DependentUpon>
+    <EmbeddedResource Include="View_order.resx">
+      <DependentUpon>View_order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

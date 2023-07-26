@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Orders_CRUD
+namespace Item
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace Orders_CRUD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Create_order());
+            Application.Run(new Form1());
         }
     }
 }
