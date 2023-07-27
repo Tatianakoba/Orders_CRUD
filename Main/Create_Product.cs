@@ -10,33 +10,19 @@ using System.Windows.Forms;
 
 namespace Main
 {
-    public partial class Main_page : Form
+    public partial class Create_Product : Form
     {
-        public Main_page()
+        public Create_Product()
         {
             InitializeComponent();
         }
 
-        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bindingSource1_CurrentChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             Create_Order create_Order = new Create_Order();
             create_Order.Show();
             Hide();
+
         }
     }
 }

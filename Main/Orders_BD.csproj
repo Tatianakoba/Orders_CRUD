@@ -46,6 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Check_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Check_Order.Designer.cs">
+      <DependentUpon>Check_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Client.Designer.cs">
+      <DependentUpon>Create_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create_Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Order.Designer.cs">
+      <DependentUpon>Create_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create_Provider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Provider.Designer.cs">
+      <DependentUpon>Create_Provider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Product.Designer.cs">
+      <DependentUpon>Create_Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +84,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Check_Order.resx">
+      <DependentUpon>Check_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_Client.resx">
+      <DependentUpon>Create_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_Order.resx">
+      <DependentUpon>Create_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_Product.resx">
+      <DependentUpon>Create_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_Provider.resx">
+      <DependentUpon>Create_Provider.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_page.resx">
       <DependentUpon>Main_page.cs</DependentUpon>
     </EmbeddedResource>
