@@ -37,5 +37,12 @@ namespace Main
             main_Page2.Show();
             Hide();
         }
+
+        private void Check_Order_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "ordersDataSet.OrdersTable". При необходимости она может быть перемещена или удалена.
+            this.ordersTableTableAdapter.Fill(this.ordersDataSet.OrdersTable);
+
+        }
     }
 }

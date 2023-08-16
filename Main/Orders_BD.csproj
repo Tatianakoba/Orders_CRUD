@@ -82,6 +82,11 @@
     <Compile Include="Main_page.Designer.cs">
       <DependentUpon>Main_page.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Check_Order.resx">
@@ -111,6 +116,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="OrdersDataSet.xsc">
+      <DependentUpon>OrdersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet.xss">
+      <DependentUpon>OrdersDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
