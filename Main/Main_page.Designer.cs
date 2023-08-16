@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_page));
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -39,24 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ordersDataSet = new Main.OrdersDataSet();
-            this.ordersDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordersTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ordersTableTableAdapter = new Main.OrdersDataSetTableAdapters.OrdersTableTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.providerIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clientIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityOrderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -145,89 +128,12 @@
             this.button2.Text = "Применить фильтры";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged_1);
-            // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.orderNumberDataGridViewTextBoxColumn,
-            this.dateDataGridViewTextBoxColumn,
-            this.providerIdDataGridViewTextBoxColumn,
-            this.clientIdDataGridViewTextBoxColumn,
-            this.productIdDataGridViewTextBoxColumn,
-            this.quantityOrderDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ordersTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 341);
+            this.dataGridView1.Location = new System.Drawing.Point(197, 340);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(614, 176);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // ordersDataSet
-            // 
-            this.ordersDataSet.DataSetName = "OrdersDataSet";
-            this.ordersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ordersDataSetBindingSource
-            // 
-            this.ordersDataSetBindingSource.DataSource = this.ordersDataSet;
-            this.ordersDataSetBindingSource.Position = 0;
-            // 
-            // ordersTableBindingSource
-            // 
-            this.ordersTableBindingSource.DataMember = "OrdersTable";
-            this.ordersTableBindingSource.DataSource = this.ordersDataSetBindingSource;
-            // 
-            // ordersTableTableAdapter
-            // 
-            this.ordersTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // orderNumberDataGridViewTextBoxColumn
-            // 
-            this.orderNumberDataGridViewTextBoxColumn.DataPropertyName = "OrderNumber";
-            this.orderNumberDataGridViewTextBoxColumn.HeaderText = "OrderNumber";
-            this.orderNumberDataGridViewTextBoxColumn.Name = "orderNumberDataGridViewTextBoxColumn";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            // 
-            // providerIdDataGridViewTextBoxColumn
-            // 
-            this.providerIdDataGridViewTextBoxColumn.DataPropertyName = "ProviderId";
-            this.providerIdDataGridViewTextBoxColumn.HeaderText = "ProviderId";
-            this.providerIdDataGridViewTextBoxColumn.Name = "providerIdDataGridViewTextBoxColumn";
-            // 
-            // clientIdDataGridViewTextBoxColumn
-            // 
-            this.clientIdDataGridViewTextBoxColumn.DataPropertyName = "ClientId";
-            this.clientIdDataGridViewTextBoxColumn.HeaderText = "ClientId";
-            this.clientIdDataGridViewTextBoxColumn.Name = "clientIdDataGridViewTextBoxColumn";
-            // 
-            // productIdDataGridViewTextBoxColumn
-            // 
-            this.productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            this.productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            // 
-            // quantityOrderDataGridViewTextBoxColumn
-            // 
-            this.quantityOrderDataGridViewTextBoxColumn.DataPropertyName = "QuantityOrder";
-            this.quantityOrderDataGridViewTextBoxColumn.HeaderText = "QuantityOrder";
-            this.quantityOrderDataGridViewTextBoxColumn.Name = "quantityOrderDataGridViewTextBoxColumn";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 0;
             // 
             // Main_page
             // 
@@ -248,12 +154,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main_page";
             this.Text = "Main_page";
-            this.Load += new System.EventHandler(this.Main_page_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,19 +171,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource ordersDataSetBindingSource;
-        private OrdersDataSet ordersDataSet;
-        private System.Windows.Forms.BindingSource ordersTableBindingSource;
-        private OrdersDataSetTableAdapters.OrdersTableTableAdapter ordersTableTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn providerIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clientIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantityOrderDataGridViewTextBoxColumn;
     }
 }
 

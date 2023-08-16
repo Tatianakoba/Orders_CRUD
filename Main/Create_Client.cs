@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,32 @@ namespace Main
             Create_Order create_Order = new Create_Order();
             create_Order.Show();
             Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DB dB = new DB();
+            var clientName = ClientName.Text;
+            var clientPassport = ClientPassport.Text;
+
+            string querystring = $"insert into Clients(Name,Passport) values('{clientName}','{clientPassport}')";
+
+            SqlCommand command = new SqlCommand(querystring, dB.getConnection());
+            dB.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+
+                Create_Order create_Order = new Create_Order();
+                this.Hide();
+                create_Order.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Ощибка создания", "Клиент не создан", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            dB.closeConnection();
         }
     }
 }

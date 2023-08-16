@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.1.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.1.0\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -76,6 +80,7 @@
     <Compile Include="Create_Product.Designer.cs">
       <DependentUpon>Create_Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="DB.cs" />
     <Compile Include="Main_page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +91,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSetClients.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSetClients.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSetProducts.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSetProducts.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +146,39 @@
     </None>
     <None Include="OrdersDataSet.xss">
       <DependentUpon>OrdersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet1.xsc">
+      <DependentUpon>OrdersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet1.xss">
+      <DependentUpon>OrdersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSetClients.xsc">
+      <DependentUpon>OrdersDataSetClients.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSetClients.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSetClients.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSetClients.xss">
+      <DependentUpon>OrdersDataSetClients.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSetProducts.xsc">
+      <DependentUpon>OrdersDataSetProducts.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSetProducts.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSetProducts.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSetProducts.xss">
+      <DependentUpon>OrdersDataSetProducts.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

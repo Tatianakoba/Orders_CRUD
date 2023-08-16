@@ -12,6 +12,7 @@ namespace Main
 {
     public partial class Main_page : Form
     {
+        DB DB = new DB();
         public Main_page()
         {
             InitializeComponent();
@@ -39,11 +40,6 @@ namespace Main
             Hide();
         }
 
-        private void Main_page_Load(object sender, EventArgs e)
-        {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "ordersDataSet.OrdersTable". При необходимости она может быть перемещена или удалена.
-            this.ordersTableTableAdapter.Fill(this.ordersDataSet.OrdersTable);
-
-        }
+        
     }
 }

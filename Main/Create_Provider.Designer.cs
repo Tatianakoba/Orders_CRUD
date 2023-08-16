@@ -31,9 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Create_Provider));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ProviderName = new System.Windows.Forms.TextBox();
+            this.CreateProvider = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ProviderINN = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -56,43 +58,66 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Введите наименование юр.лица";
             // 
-            // textBox1
+            // ProviderName
             // 
-            this.textBox1.Location = new System.Drawing.Point(397, 114);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(273, 20);
-            this.textBox1.TabIndex = 1;
+            this.ProviderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ProviderName.Location = new System.Drawing.Point(351, 114);
+            this.ProviderName.Multiline = true;
+            this.ProviderName.Name = "ProviderName";
+            this.ProviderName.Size = new System.Drawing.Size(273, 27);
+            this.ProviderName.TabIndex = 1;
             // 
-            // button1
+            // CreateProvider
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(272, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(239, 49);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Создать";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CreateProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateProvider.Location = new System.Drawing.Point(235, 224);
+            this.CreateProvider.Name = "CreateProvider";
+            this.CreateProvider.Size = new System.Drawing.Size(239, 49);
+            this.CreateProvider.TabIndex = 2;
+            this.CreateProvider.Text = "Создать";
+            this.CreateProvider.UseVisualStyleBackColor = true;
+            this.CreateProvider.Click += new System.EventHandler(this.CreateProvider_Click);
             // 
-            // button2
+            // Cancel
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(272, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(239, 39);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Отмена";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Cancel.Location = new System.Drawing.Point(235, 306);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(239, 46);
+            this.Cancel.TabIndex = 3;
+            this.Cancel.Text = "Отмена";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(79, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Введите ИНН";
+            // 
+            // ProviderINN
+            // 
+            this.ProviderINN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ProviderINN.Location = new System.Drawing.Point(351, 147);
+            this.ProviderINN.Name = "ProviderINN";
+            this.ProviderINN.Size = new System.Drawing.Size(273, 26);
+            this.ProviderINN.TabIndex = 1;
             // 
             // Create_Provider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(726, 450);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.CreateProvider);
+            this.Controls.Add(this.ProviderINN);
+            this.Controls.Add(this.ProviderName);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -107,8 +132,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox ProviderName;
+        private System.Windows.Forms.Button CreateProvider;
+        private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox ProviderINN;
     }
 }
