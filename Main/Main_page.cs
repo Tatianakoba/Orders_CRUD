@@ -12,10 +12,12 @@ namespace Main
 {
     public partial class Main_page : Form
     {
+        
         DB DB = new DB();
         public Main_page()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void bindingSource1_CurrentChanged(object sender, EventArgs e)
