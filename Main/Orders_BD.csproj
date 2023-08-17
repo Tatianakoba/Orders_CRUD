@@ -97,6 +97,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdersDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="OrdersDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdersDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OrdersDataSetClients.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +167,28 @@
     </None>
     <None Include="OrdersDataSet1.xss">
       <DependentUpon>OrdersDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet2.xsc">
+      <DependentUpon>OrdersDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet2.xss">
+      <DependentUpon>OrdersDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet3.xsc">
+      <DependentUpon>OrdersDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="OrdersDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdersDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdersDataSet3.xss">
+      <DependentUpon>OrdersDataSet3.xsd</DependentUpon>
     </None>
     <None Include="OrdersDataSetClients.xsc">
       <DependentUpon>OrdersDataSetClients.xsd</DependentUpon>

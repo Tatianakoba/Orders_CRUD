@@ -16,6 +16,7 @@ namespace Main
         public Create_Client()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -23,20 +24,25 @@ namespace Main
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void CancelClient(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CancelClientButton_Click(object sender, EventArgs e)
         {
             Create_Order create_Order = new Create_Order();
             create_Order.Show();
             Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CreateClientButton_Click(object sender, EventArgs e)
         {
             DB dB = new DB();
             var clientName = ClientName.Text;
-            var clientPassport = ClientPassport.Text;
+            var clientPassport = ClientPassportField.Text;
 
-            string querystring = $"insert into Clients(Name,Passport) values('{clientName}','{clientPassport}')";
+            string querystring = $"insert into Clients(ClientPassport,Name) values('{clientPassport}','{clientName}')";
 
             SqlCommand command = new SqlCommand(querystring, dB.getConnection());
             dB.openConnection();
@@ -54,6 +60,11 @@ namespace Main
                 MessageBox.Show("Ощибка создания", "Клиент не создан", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             dB.closeConnection();
+        }
+
+        private void ClientPassport_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

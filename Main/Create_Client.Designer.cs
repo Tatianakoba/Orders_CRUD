@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ClientName = new System.Windows.Forms.TextBox();
-            this.ClientPassport = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.CancelClientButton = new System.Windows.Forms.Button();
+            this.CreateClientButton = new System.Windows.Forms.Button();
+            this.ClientPassportField = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -65,24 +65,6 @@
             this.ClientName.Size = new System.Drawing.Size(352, 20);
             this.ClientName.TabIndex = 1;
             // 
-            // ClientPassport
-            // 
-            this.ClientPassport.Location = new System.Drawing.Point(261, 163);
-            this.ClientPassport.Name = "ClientPassport";
-            this.ClientPassport.Size = new System.Drawing.Size(352, 20);
-            this.ClientPassport.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(287, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 60);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Создать";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -94,16 +76,34 @@
             this.label3.Text = "Серия и номер паспорта";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // button2
+            // CancelClientButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(287, 301);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 60);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Отмена";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.CancelClientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CancelClientButton.Location = new System.Drawing.Point(287, 301);
+            this.CancelClientButton.Name = "CancelClientButton";
+            this.CancelClientButton.Size = new System.Drawing.Size(173, 60);
+            this.CancelClientButton.TabIndex = 2;
+            this.CancelClientButton.Text = "Отмена";
+            this.CancelClientButton.UseVisualStyleBackColor = true;
+            this.CancelClientButton.Click += new System.EventHandler(this.CancelClientButton_Click);
+            // 
+            // CreateClientButton
+            // 
+            this.CreateClientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateClientButton.Location = new System.Drawing.Point(287, 235);
+            this.CreateClientButton.Name = "CreateClientButton";
+            this.CreateClientButton.Size = new System.Drawing.Size(173, 60);
+            this.CreateClientButton.TabIndex = 2;
+            this.CreateClientButton.Text = "Создать";
+            this.CreateClientButton.UseVisualStyleBackColor = true;
+            this.CreateClientButton.Click += new System.EventHandler(this.CancelClientButton_Click);
+            // 
+            // ClientPassportField
+            // 
+            this.ClientPassportField.Location = new System.Drawing.Point(260, 161);
+            this.ClientPassportField.Name = "ClientPassportField";
+            this.ClientPassportField.Size = new System.Drawing.Size(352, 20);
+            this.ClientPassportField.TabIndex = 1;
             // 
             // Create_Client
             // 
@@ -111,10 +111,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.ClientPassport);
+            this.Controls.Add(this.CreateClientButton);
+            this.Controls.Add(this.CancelClientButton);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.ClientPassportField);
             this.Controls.Add(this.ClientName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -131,9 +131,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox ClientName;
-        private System.Windows.Forms.TextBox ClientPassport;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button CancelClientButton;
+        private System.Windows.Forms.Button CreateClientButton;
+        private System.Windows.Forms.TextBox ClientPassportField;
     }
 }

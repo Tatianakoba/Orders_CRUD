@@ -20,7 +20,7 @@ namespace Main
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void CreateProviderButton(object sender, EventArgs e)
         {
             Create_Order create_Order = new Create_Order();
             create_Order.Show();
@@ -51,6 +51,13 @@ namespace Main
                 MessageBox.Show("Ощибка создания", "Поставщик не создан", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             dB.closeConnection();
+        }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            Create_Order create_Order = new Create_Order();
+            create_Order.Show();
+            Hide();
         }
     }
 }

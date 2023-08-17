@@ -36,22 +36,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.CreateProviderButton = new System.Windows.Forms.Button();
+            this.CreateClient = new System.Windows.Forms.Button();
+            this.CreateProduct = new System.Windows.Forms.Button();
+            this.CancelOrder = new System.Windows.Forms.Button();
+            this.ViewOrder = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.ProductQuantity = new System.Windows.Forms.TextBox();
             this.ProviderINN = new System.Windows.Forms.ComboBox();
             this.providerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ordersDataSet1 = new Main.OrdersDataSet1();
             this.providerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.providerTableAdapter = new Main.OrdersDataSet1TableAdapters.ProviderTableAdapter();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.clientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ordersDataSetClients = new Main.OrdersDataSetClients();
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,10 +58,16 @@
             this.ordersDataSetProducts = new Main.OrdersDataSetProducts();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsTableAdapter = new Main.OrdersDataSetProductsTableAdapters.ProductsTableAdapter();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.productsBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.productsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.ordersDataSetProductsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ClientPassport = new System.Windows.Forms.ComboBox();
+            this.clientsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.ordersDataSet2 = new Main.OrdersDataSet2();
+            this.clientsTableAdapter1 = new Main.OrdersDataSet2TableAdapters.ClientsTableAdapter();
+            this.ProductSelection = new System.Windows.Forms.ComboBox();
+            this.AddString = new System.Windows.Forms.Button();
+            this.DeleteString = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.providerBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.providerBindingSource)).BeginInit();
@@ -77,6 +80,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersDataSetProductsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -136,82 +141,60 @@
             this.textBox4.Size = new System.Drawing.Size(360, 22);
             this.textBox4.TabIndex = 4;
             // 
-            // button1
+            // CreateProviderButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(736, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(298, 35);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Создать нового Поставщика";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.CreateProviderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateProviderButton.Location = new System.Drawing.Point(736, 99);
+            this.CreateProviderButton.Name = "CreateProviderButton";
+            this.CreateProviderButton.Size = new System.Drawing.Size(298, 35);
+            this.CreateProviderButton.TabIndex = 5;
+            this.CreateProviderButton.Text = "Создать нового Поставщика";
+            this.CreateProviderButton.UseVisualStyleBackColor = true;
+            this.CreateProviderButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button2
+            // CreateClient
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(736, 154);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(298, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Создать нового Покупателя";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.CreateClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateClient.Location = new System.Drawing.Point(736, 154);
+            this.CreateClient.Name = "CreateClient";
+            this.CreateClient.Size = new System.Drawing.Size(298, 30);
+            this.CreateClient.TabIndex = 5;
+            this.CreateClient.Text = "Создать нового Покупателя";
+            this.CreateClient.UseVisualStyleBackColor = true;
+            this.CreateClient.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // button3
+            // CreateProduct
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(736, 233);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(298, 31);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Создать новый продукт";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.CreateProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateProduct.Location = new System.Drawing.Point(736, 231);
+            this.CreateProduct.Name = "CreateProduct";
+            this.CreateProduct.Size = new System.Drawing.Size(298, 31);
+            this.CreateProduct.TabIndex = 5;
+            this.CreateProduct.Text = "Создать новый продукт";
+            this.CreateProduct.UseVisualStyleBackColor = true;
+            this.CreateProduct.Click += new System.EventHandler(this.CreateProduct_Click);
             // 
-            // button4
+            // CancelOrder
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(736, 283);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(298, 29);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Добавить строку в заказ";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.CancelOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CancelOrder.Location = new System.Drawing.Point(736, 401);
+            this.CancelOrder.Name = "CancelOrder";
+            this.CancelOrder.Size = new System.Drawing.Size(298, 29);
+            this.CancelOrder.TabIndex = 5;
+            this.CancelOrder.Text = "Отменить заказ";
+            this.CancelOrder.UseVisualStyleBackColor = true;
+            this.CancelOrder.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button5
+            // ViewOrder
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(736, 332);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(298, 29);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Удалить строку из заказа";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(736, 392);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(298, 29);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Отменить заказ";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(344, 533);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(410, 40);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Просмотр заказа";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            this.ViewOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ViewOrder.Location = new System.Drawing.Point(344, 533);
+            this.ViewOrder.Name = "ViewOrder";
+            this.ViewOrder.Size = new System.Drawing.Size(410, 40);
+            this.ViewOrder.TabIndex = 5;
+            this.ViewOrder.Text = "Просмотр заказа";
+            this.ViewOrder.UseVisualStyleBackColor = true;
+            this.ViewOrder.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // label6
             // 
@@ -235,25 +218,22 @@
             this.label7.Text = "Количество";
             this.label7.Visible = false;
             // 
-            // textBox6
+            // ProductQuantity
             // 
-            this.textBox6.Location = new System.Drawing.Point(313, 410);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(360, 22);
-            this.textBox6.TabIndex = 4;
-            this.textBox6.Visible = false;
+            this.ProductQuantity.Location = new System.Drawing.Point(314, 410);
+            this.ProductQuantity.Name = "ProductQuantity";
+            this.ProductQuantity.Size = new System.Drawing.Size(360, 22);
+            this.ProductQuantity.TabIndex = 4;
+            this.ProductQuantity.Visible = false;
             // 
             // ProviderINN
             // 
             this.ProviderINN.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.providerBindingSource1, "Name", true));
-            this.ProviderINN.DataSource = this.providerBindingSource;
-            this.ProviderINN.DisplayMember = "Name";
             this.ProviderINN.FormattingEnabled = true;
             this.ProviderINN.Location = new System.Drawing.Point(313, 106);
             this.ProviderINN.Name = "ProviderINN";
             this.ProviderINN.Size = new System.Drawing.Size(360, 24);
             this.ProviderINN.TabIndex = 6;
-            this.ProviderINN.ValueMember = "Name";
             this.ProviderINN.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // providerBindingSource1
@@ -274,18 +254,6 @@
             // providerTableAdapter
             // 
             this.providerTableAdapter.ClearBeforeFill = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clientsBindingSource1, "Passport", true));
-            this.comboBox2.DataSource = this.clientsBindingSource;
-            this.comboBox2.DisplayMember = "Passport";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(314, 158);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(359, 24);
-            this.comboBox2.TabIndex = 7;
-            this.comboBox2.ValueMember = "Passport";
             // 
             // clientsBindingSource1
             // 
@@ -308,6 +276,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.comboBox3.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productsBindingSource1, "Item", true));
             this.comboBox3.DataSource = this.productsBindingSource;
             this.comboBox3.DisplayMember = "Item";
@@ -337,18 +306,6 @@
             // 
             this.productsTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox4
-            // 
-            this.comboBox4.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productsBindingSource3, "Item", true));
-            this.comboBox4.DataSource = this.productsBindingSource2;
-            this.comboBox4.DisplayMember = "Item";
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(314, 362);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(360, 24);
-            this.comboBox4.TabIndex = 8;
-            this.comboBox4.ValueMember = "Item";
-            // 
             // productsBindingSource3
             // 
             this.productsBindingSource3.DataMember = "Products";
@@ -364,24 +321,79 @@
             this.ordersDataSetProductsBindingSource.DataSource = this.ordersDataSetProducts;
             this.ordersDataSetProductsBindingSource.Position = 0;
             // 
+            // ClientPassport
+            // 
+            this.ClientPassport.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clientsBindingSource2, "ClientPassport", true));
+            this.ClientPassport.FormattingEnabled = true;
+            this.ClientPassport.Location = new System.Drawing.Point(313, 158);
+            this.ClientPassport.Name = "ClientPassport";
+            this.ClientPassport.Size = new System.Drawing.Size(360, 24);
+            this.ClientPassport.TabIndex = 6;
+            this.ClientPassport.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // clientsBindingSource2
+            // 
+            this.clientsBindingSource2.DataMember = "Clients";
+            this.clientsBindingSource2.DataSource = this.ordersDataSet2;
+            // 
+            // ordersDataSet2
+            // 
+            this.ordersDataSet2.DataSetName = "OrdersDataSet2";
+            this.ordersDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientsTableAdapter1
+            // 
+            this.clientsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // ProductSelection
+            // 
+            this.ProductSelection.FormattingEnabled = true;
+            this.ProductSelection.Location = new System.Drawing.Point(313, 366);
+            this.ProductSelection.Name = "ProductSelection";
+            this.ProductSelection.Size = new System.Drawing.Size(360, 24);
+            this.ProductSelection.TabIndex = 9;
+            this.ProductSelection.Visible = false;
+            // 
+            // AddString
+            // 
+            this.AddString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddString.Location = new System.Drawing.Point(736, 278);
+            this.AddString.Name = "AddString";
+            this.AddString.Size = new System.Drawing.Size(298, 31);
+            this.AddString.TabIndex = 5;
+            this.AddString.Text = "Добавить строку";
+            this.AddString.UseVisualStyleBackColor = true;
+            this.AddString.Click += new System.EventHandler(this.AddString_Click);
+            // 
+            // DeleteString
+            // 
+            this.DeleteString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteString.Location = new System.Drawing.Point(736, 355);
+            this.DeleteString.Name = "DeleteString";
+            this.DeleteString.Size = new System.Drawing.Size(298, 31);
+            this.DeleteString.TabIndex = 5;
+            this.DeleteString.Text = "Удалить строку";
+            this.DeleteString.UseVisualStyleBackColor = true;
+            this.DeleteString.Click += new System.EventHandler(this.DeleteString_Click);
+            // 
             // Create_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1067, 653);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.ProductSelection);
+            this.Controls.Add(this.ClientPassport);
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.ProviderINN);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.ViewOrder);
+            this.Controls.Add(this.CancelOrder);
+            this.Controls.Add(this.DeleteString);
+            this.Controls.Add(this.AddString);
+            this.Controls.Add(this.CreateProduct);
+            this.Controls.Add(this.CreateClient);
+            this.Controls.Add(this.CreateProviderButton);
+            this.Controls.Add(this.ProductQuantity);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -408,6 +420,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersDataSetProductsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,22 +435,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button CreateProviderButton;
+        private System.Windows.Forms.Button CreateClient;
+        private System.Windows.Forms.Button CreateProduct;
+        private System.Windows.Forms.Button CancelOrder;
+        private System.Windows.Forms.Button ViewOrder;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox ProductQuantity;
         private System.Windows.Forms.ComboBox ProviderINN;
         private OrdersDataSet1 ordersDataSet1;
         private System.Windows.Forms.BindingSource providerBindingSource;
         private OrdersDataSet1TableAdapters.ProviderTableAdapter providerTableAdapter;
         private System.Windows.Forms.BindingSource providerBindingSource1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private OrdersDataSetClients ordersDataSetClients;
         private System.Windows.Forms.BindingSource clientsBindingSource;
         private OrdersDataSetClientsTableAdapters.ClientsTableAdapter clientsTableAdapter;
@@ -446,9 +457,15 @@
         private System.Windows.Forms.BindingSource productsBindingSource;
         private OrdersDataSetProductsTableAdapters.ProductsTableAdapter productsTableAdapter;
         private System.Windows.Forms.BindingSource productsBindingSource1;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.BindingSource productsBindingSource3;
         private System.Windows.Forms.BindingSource productsBindingSource2;
         private System.Windows.Forms.BindingSource ordersDataSetProductsBindingSource;
+        private System.Windows.Forms.ComboBox ClientPassport;
+        private OrdersDataSet2 ordersDataSet2;
+        private System.Windows.Forms.BindingSource clientsBindingSource2;
+        private OrdersDataSet2TableAdapters.ClientsTableAdapter clientsTableAdapter1;
+        private System.Windows.Forms.ComboBox ProductSelection;
+        private System.Windows.Forms.Button AddString;
+        private System.Windows.Forms.Button DeleteString;
     }
 }
